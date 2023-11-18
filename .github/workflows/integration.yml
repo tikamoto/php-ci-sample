@@ -1,0 +1,21 @@
+name: Integration
+on: 
+  pull_request:
+jobs:
+  Integration:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Setup
+        run: |
+          npm install
+          npx playwright install
+          docker-compose up -d
+          npm run composer install
+      - name: Run Static Test
+        run: npm run test:static
+      - name: Run Unit Test
+        run: npm run test:unit
+      - name: Run E2E Test
+        run: npm run test:e2e

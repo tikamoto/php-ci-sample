@@ -1,0 +1,17 @@
+{
+  "name": "php-ci-sample",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.9.1"
+  },
+  "scripts": {
+    "composer": "docker exec -w /var/www/app php-ci-sample composer",
+    "test:static": "docker exec -w /var/www/app php-ci-sample vendor/bin/phpstan analyse",
+    "test:unit": "docker exec -w /var/www/app php-ci-sample vendor/bin/phpunit tests/unit",
+    "test:e2e": "npx playwright test -c app"
+  },
+  "volta": {
+    "node": "20.9.0"
+  }
+}
