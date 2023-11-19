@@ -1,6 +1,8 @@
 name: Integration
 on: 
   pull_request:
+    branches:
+      - main
 jobs:
   Integration:
     runs-on: ubuntu-latest
