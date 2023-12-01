@@ -19,7 +19,7 @@ $h = fn($v) => htmlspecialchars($v, ENT_QUOTES, 'UTF-8');
     <input type="submit" value="Fizz or Buzz">
   </form>
   <p>Answer: 
-    <span class="answer"><?php echo $h($input ?? '');?></span>
+    <span class="answer"><?php echo $h($answer ?? '');?></span>
   </p>
 </body>
 </html>
