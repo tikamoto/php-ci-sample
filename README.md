@@ -4,7 +4,7 @@ PHPのCI環境テンプレート
 
 ## Overview
 
-以下の自動テストをGitHubActions上で動かしてCI環境を作るための、PHP8.2の最小構成テンプレートです。
+以下の自動テストをGitHubActions上で動かしてCI環境を作るための、PHP8.3の最小構成テンプレートです。
 
 - 静的解析テスト（[PHPStan](https://phpstan.org/)）
 - ユニットテスト（[PHPUnit](https://phpunit.de/)）
@@ -27,17 +27,17 @@ docker-compose up -d
 
 ## Usage
 
-静的解析テスト実行
+静的解析テスト実行（PHPStan使用）
 ```
 npm run test:static 
 ```
 
-ユニットテスト実行
+ユニットテスト実行（PHPUnit使用）
 ```
 npm run test:phpunit 
 ```
 
-E2Eテスト実行
+E2Eテスト実行（Playwright使用）
 ```
 npm run test:e2e 
 ```
